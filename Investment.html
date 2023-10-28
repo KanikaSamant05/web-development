@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Software</title>
+    <link rel="stylesheet" href="./investment.css">
+</head>
+<body>
+    <div id="main">
+    <h1>FD Investment</h1>
+    <div class="li">
+    <label>Enter the Principal Amount</label>
+    <input type="number" name="" id="principal"><br><br>
+    <label>Time in years</label>
+    <input type="number" name="" id="time"><br><br></div>
+    <div id="bk">
+    <label for="">Select Bank</label>
+<select id="bank" value="" onchange="interest()">
+        <option name="SBI" id="">SBI</option>
+        <option name="PNB" id="">PNB</option>
+        <option name="BOB" id="">ICICI</option>
+        <option name="ICICI" id="">BOB</option>
+    </select>
+</div>
+    <h1>Your Interest Rate is: </h1>
+    <h3 id="interest"></h3>
+    <h1>Total Amount:</h1>
+    <h3 id="amount"></h3>
+</body>
+    <script>
+        function interest(){
+       let p=document.getElementById("principal")
+       let t=document.getElementById("time")
+       let o=document.getElementById("bank")
+       let r=document.getElementById("interest")
+       let a=document.getElementById("amount")
+    
+       if(o.value=="SBI"){
+let result=(p.value*t.value*7.5)/100;
+r.innerHTML=result
+let total=Number.parseFloat(p.value)+Number.parseFloat(result);
+a.innerHTML=total;
+       }
+       if(o.value=="PNB"){
+let result=(p.value*t.value*9.5)/100;
+r.innerHTML=result
+let total=Number.parseFloat(p.value)+Number.parseFloat(result);
+a.innerHTML=total;
+       }
+    }
+  </script>
+       </div>
+
+</html>

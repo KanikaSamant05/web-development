@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOm</title>
+</head>
+<body>
+    <div id="box1">Shailu</div>
+    <div id="box2">Riya</div>
+    <div id="box3">Ritu</div>
+    <div id="box4">Neil</div>
+    <button onclick="Change()">Click me</button>
+</body>
+<script>
+    function Change(){
+//let box=document.getElementById("box1")
+let box=document.getElementsByTagName("div")
+console.log(box)
+for(i=0;i<box.length;i++){
+box[i].innerHTML="Subh"
+box[i].style.color="red"
+    }
+    }
+</script>
+
+</html>
